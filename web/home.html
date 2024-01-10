@@ -4,127 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Web Page</title>
-    <Style>
-    #header {
-        padding: 15px;
-        background-color: #141414;
-        text-align: center;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    #urlTextbox {
-        width: 60%;
-        padding: 10px;
-        border: 1px solid #3498db;
-        border-radius: 5px;
-        outline: none;
-        transition: border-color 0.3s;
-        background-color: #2c3e50;
-        color: #ecf0f1;
-    }
-
-    #urlTextbox:focus {
-        border-color: #2980b9;
-    }
-
-    #runButton {
-        padding: 10px;
-        cursor: pointer;
-        background-color: #2ecc71;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        outline: none;
-        transition: background-color 0.3s;
-    }
-
-    #runButton:hover {
-        background-color: #27ae60;
-    }
-
-    #container {
-        display: flex;
-        height: calc(100vh - 50px);
-        overflow: hidden;
-        transition: height 0.3s;
-    }
-
-    #iframeContainer, #editorContainer {
-        width: 50%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    #iframeContainer {
-        border-right: 1px solid #333;
-    }
-
-    #myIFrame {
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-
-    #editorContainer {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
-
-    #editor {
-        width: 100%;
-        height: 100%;
-        resize: none;
-        border: 1px solid #333;
-        border-radius: 5px;
-        padding: 10px;
-        margin-top: 10px;
-        box-sizing: border-box;
-        outline: none;
-        transition: border-color 0.3s;
-        background-color: #2c3e50;
-        color: #ecf0f1;
-    }
-
-    #editor:focus {
-        border-color: #3498db;
-    }
-
-    #buttonsContainer {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding: 10px;
-        box-sizing: border-box;
-        background-color: #141414;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .actionButton {
-        padding: 10px;
-        cursor: pointer;
-        background-color: #3498db;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        outline: none;
-        transition: background-color 0.3s;
-    }
-
-    .actionButton:hover {
-        background-color: #2980b9;
-    }
-
-    /* Animation for buttons */
-    .actionButton, #runButton {
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .actionButton:hover, #runButton:hover {
-        transform: scale(1.1);
-    }
-</style>
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.31.1/min/vs/loader.js"></script>
+    <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
@@ -151,11 +32,8 @@
 
 
 
-<script>
-    function runCode() {
-        var url = document.getElementById('urlTextbox').value;
-        document.getElementById('myIFrame').src = url;
-    }
+<script src="home.js">
+
 </script>
 
 </body>
