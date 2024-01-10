@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scraper</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_header.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="console.css">
+    <link rel="stylesheet" href="frame&code_editor.css">
+    <link rel="stylesheet" href="message.css">
     <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.31.1/min/vs/loader.js"></script>
 </head>
 <body>
@@ -30,7 +35,8 @@
 <div id="container">
     <!-- Code Editor Container -->
     <div id="editorContainer">
-        <div id="editor" placeholder="Enter JavaScript code"></div>
+        <div id="editor" ></div>
+        
     </div>
     
     <!-- Iframe Container -->
@@ -55,7 +61,7 @@
     </button>
     <button id="toggleButton" class="snip1245">
         one side
-        <i><img src="upload.svg" width="80%" height="80%"></i>
+        <i><img src="arrow_down.svg" width="80%" height="80%"></i>
     </button>
 
 </div>

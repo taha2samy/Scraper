@@ -1,0 +1,7 @@
+#console {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #ecf0f1; /* Light blue-gray console background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,74 @@
+#header {
+    background-color: #9DA7FF; /* Primary blue */
+	position:relative;
+	width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+	border-radius:3px;
+    
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+
+	
+}
+
+.Input {
+    position: relative;
+    flex: 0 0 80%;
+    display: flex;
+    margin-left:5% ;
+    align-items: center;
+    justify-content: center;
+    
+}
+.Input label {
+    display: block;
+    margin-bottom: 10px; /* Increase the space between label and input */
+    color: #333; /* Set your desired label color */
+    font-size: 18px; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: top 0.3s, font-size 0.3s, color 0.3s, opacity 0.3s;
+    opacity: 0; /* Initially set opacity to 0 */
+}
+
+.Input input[type="url"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  
+    font-weight: bold; /* Make the text bold */
+    border: none; /* Remove the default border */
+    border-bottom: 2px solid #007bff; /* Add a bottom border */
+    border-left: 2px solid #007bff; /* Add a left border */
+    background-color: rgba(220, 227, 235, 0.5); /* Set the background color with opacity */
+    transition: box-shadow 0.3s ease, padding-top 0.3s;
+    box-sizing: border-box;
+}
+
+.Input input[type="url"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+    background-color: rgba(67, 95, 128, 0.7)
+}
+
+.Input input[type="url"]:focus + label,
+.Input input[type="url"]:not(:placeholder-shown) + label {
+    top:-10px; /* Adjust as needed */
+    font-size: 20px; /* Adjust as needed */
+    color: #686c70c7; /* Set your desired label color when active */
+    opacity: 1; /* Make label visible when input is focused or has content */
+}
+
+.two
+{
+    flex: 0 0 20%;
+    
+}

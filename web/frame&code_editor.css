@@ -1,0 +1,48 @@
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#editorContainer {
+    flex: 1;
+    background-color: #b9b05f00    ; /* White editor background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    width: 40%;
+}
+
+#editor {
+    height: 1000px;
+    border: 0;
+    padding: 0px;
+    margin-top: 0;
+    
+}
+
+
+#iframeContainer {
+    flex: 1;
+    background-color: #b9b05f00    ; /* White editor background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    width: 100%;
+    padding: 2px;
+    resize: vertical;
+    overflow: scroll;
+    
+}
+
+
+
+#myIFrame {
+    width: 100%;
+    height: 100;
+    border: none;
+    
+}

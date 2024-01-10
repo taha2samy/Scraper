@@ -1,25 +1,32 @@
+var global_editor;
 require.config({ paths: { 'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.31.1/min/vs' } });
-require(['vs/editor/editor.main'], function () {
-    var editor = monaco.editor.create(document.getElementById('editor'), {
-        value: [
-            `console.log("||||||| Welcome to Scraper |||||||||||");`,
-            `let doc=document.getElementById("page");`,
-            ''
-        ].join('\n'),
-        language: 'javascript',
-        fontSize: 22,
-        fontWeight: 'bold',
-   
-    });
 
-    // Set 100% width and height, and change background color
-    editor.getDomNode().style.width = '50%';
-    editor.getDomNode().style.height = '100%';
-    
+        require(['vs/editor/editor.main'], function () {
+            var editor = monaco.editor.create(document.getElementById('editor'), {
+                value: [
+                    `console.log("||||||| Welcome to Scraper |||||||||||");`,
+                    `let doc=document.getElementById("page");`,
+                    ''
+                ].join('\n'),
+                language: 'javascript',
+                fontSize: 22,
+                fontWeight: 'bold',
+                automaticLayout: true,
+            });
+
+            // Set initial width and height
+            
+
+            // Assign the editor to a global variable for later access
+            global_editor = editor;
+
+            // Make the container resizable
  
-}, function (error) {
-    console.error('Monaco Editor failed to load:', error);
-});
+        }, function (error) {
+            console.error('Monaco Editor failed to load:', error);
+        });
+
+
 
 // Function to show notification messages
 function showMessage(messageText) {
@@ -106,14 +113,16 @@ toggleButton.addEventListener('click', function () {
     var container = document.getElementById('container');
 
     if (editor.parentNode === container) {
+        
         container.parentNode.insertBefore(editor, container.nextElementSibling);
         document.getElementById("toggleButton").firstChild.textContent="one side";
-        document.getElementById("toggleButton").firstElementChild.firstElementChild.setAttribute("src","arrow_up.svg")
-    } else {
+        document.getElementById("toggleButton").firstElementChild.firstElementChild.setAttribute("src","arrow_up.svg");
+        document.getElementById("editorContainer").style.setProperty("width","100%");
+            }        else {
         document.getElementById("toggleButton").firstChild.textContent="two side";
         container.insertBefore(editor, container.firstChild);
         document.getElementById("toggleButton").firstElementChild.firstElementChild.setAttribute("src","arrow_down.svg")
-
+        document.getElementById("editorContainer").style.setProperty("width","40%");
     }
 });
 
