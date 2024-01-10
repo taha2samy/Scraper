@@ -3,38 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Web Page</title>
+    <title>Scraper
+        
+    </title>
     <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.31.1/min/vs/loader.js"></script>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
 
 <div id="header">
     <input type="text" id="urlTextbox" placeholder="Enter URL">
-    <button id="runButton" onclick="runCode()">Run</button>
+    <button id="runButton">Run</button>
 </div>
 
 <div id="container">
     <div id="editorContainer">
-        <textarea id="editor" placeholder="Enter JavaScript code"></textarea>
+        <div id="editor" placeholder="Enter JavaScript code"></div>
         <div id="buttonsContainer">
-    <button class="actionButton">Button 1</button>
-    <button class="actionButton">Button 2</button>
-    <button class="actionButton">Button 3</button>
-</div>
+            <button class="actionButton" id="excaute">run</button>
+            <button class="actionButton">Button 2</button>
+            <button class="actionButton" id="toggleButton">↓</button>
+        </div>
     </div>
     <div id="iframeContainer">
-        <iframe id="myIFrame"></iframe>
+        <iframe id="myIFrame" src="https://www.google.com/"></iframe>
     </div>
-
 </div>
 
+<div id="console"></div>
 
-
-<script src="home.js">
-
-</script>
+<script src="home.js"></script>
 
 </body>
 </html>
