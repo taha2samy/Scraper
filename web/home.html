@@ -3,43 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scraper
-        
-    </title>
-    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.31.1/min/vs/loader.js"></script>
+    <title>Scraper</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.31.1/min/vs/loader.js"></script>
 </head>
 <body>
 
+<!-- Message Container for Notifications -->
+<div class="message-container" id="messageContainer"></div>
+
+<!-- Header Section -->
 <div id="header">
-    <input type="text" id="urlTextbox" placeholder="Enter URL">
-    <button id="runButton">Run</button>
+    <div class="Input">
+        <input type="url" id="urlInput" name="urlInput" placeholder="Entre URL">
+        <label for="urlInput">Entre URL</label>
+    </div>
+    <div class="two">
+    <button id="go" class="snip1245">
+        Run
+        <i><img src="search.svg" width="80%" height="80%"></i>
+    </button>
+    </div>
 </div>
 
+<!-- Main Content Container -->
 <div id="container">
+    <!-- Code Editor Container -->
     <div id="editorContainer">
         <div id="editor" placeholder="Enter JavaScript code"></div>
-        
     </div>
+    
+    <!-- Iframe Container -->
     <div id="iframeContainer">
         <iframe id="myIFrame" src="https://www.google.com/"></iframe>
     </div>
 </div>
+
+<!-- Action Buttons Container -->
 <div id="buttonsContainer">
-    <button id="excaute" class="snip1245">
+    <button id="execute" class="snip1245">
         Run
         <i><img src="run.svg" width="80%" height="80%"></i>
     </button>
-    <button id="save_comands" class="snip1245">
-        Download
+    <button id="save_Command" class="snip1245">
+        Save
         <i><img src="download.svg" width="80%" height="80%"></i>
     </button>
-    <button class="actionButton">Button 2</button>
-    <button class="actionButton" id="toggleButton">↓</button>
+    <button id="upload_Command" class="snip1245">
+        Upload
+        <i><img src="upload.svg" width="80%" height="80%"></i>
+    </button>
+    <button id="toggleButton" class="snip1245">
+        one side
+        <i><img src="upload.svg" width="80%" height="80%"></i>
+    </button>
+
 </div>
+
+<!-- Console Output Section -->
 <div id="console"></div>
 
 <script src="home.js"></script>
+
+
 
 </body>
 </html>
