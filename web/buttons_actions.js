@@ -26,9 +26,11 @@ document.getElementById("execute").addEventListener("click", () => {
 
 
 toggleButton.addEventListener('click', function () {
+    let editor=document.getElementById("editorContainer");
+    let container=document.getElementById("container");
     if (editor.parentNode === container) {
         
-        container.parentNode.insertBefore(editor, container.nextElementSibling);
+        container.parentNode.insertBefore(editor, container.nextSibling);
         document.getElementById("toggleButton").firstChild.textContent="two sides";
         document.getElementById("toggleButton").firstElementChild.firstElementChild.setAttribute("src","arrow_up.svg");
         document.getElementById("editorContainer").style.setProperty("width","100%");
