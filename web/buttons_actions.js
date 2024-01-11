@@ -1,7 +1,7 @@
 document.getElementById("go").addEventListener("click", () => {
     document.getElementById("go").firstElementChild.firstElementChild.setAttribute("src", "loading.svg");
     var iframe = document.getElementsByTagName("iframe")[0];
-    iframe.setAttribute("src", document.getElementById("urlTextbox").value);
+    iframe.setAttribute("src", document.getElementById("urlInput").value);
     iframe.onload = () => {
         document.getElementById("go").firstElementChild.firstElementChild.setAttribute("src", "search.svg");
         showMessage("Page is loaded");
