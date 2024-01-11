@@ -10,7 +10,7 @@ document.getElementById("go").addEventListener("click", () => {
 
 
 document.getElementById("execute").addEventListener("click", () => {
-    console.log("Executing code");
+   
     const code = monaco.editor.getModels()[0].getValue();
     document.getElementById("execute").firstElementChild.firstElementChild.setAttribute("src", "loading.svg");
 
@@ -56,3 +56,28 @@ document.getElementById("save_Command").addEventListener("click",()=>
     showMessage("file dialog is created look to taskbar")
 }
 )
+
+
+document.getElementById("upload_Command").addEventListener("click",()=>
+{
+
+let v=document.getElementById("just_click");
+v.click();
+
+
+const file = v.files[0];
+
+if (file) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        const contents = e.target.result;
+        global_editor.setValue(contents)
+    };
+    reader.readAsText(file);
+
+}
+    
+})
+
+
