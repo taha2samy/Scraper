@@ -19,7 +19,7 @@ body {
 #buttonsContainer {
     display: flex;
     gap: 10px;
-    margin: 14px;
+    margin-top:7px;
 }
 
 
