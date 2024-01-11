@@ -48,3 +48,11 @@ document.getElementById("clear_console").addEventListener("click",()=>
     document.getElementById("console").innerHTML="";
     clear();
 })
+
+
+document.getElementById("save_Command").addEventListener("click",()=>
+{
+    eel.save_text_to_file(global_editor.getValue());
+    showMessage("file dialog is created look to taskbar")
+}
+)
