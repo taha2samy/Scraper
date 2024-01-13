@@ -12,19 +12,53 @@ The "Scraper" tool is a comprehensive web scraping solution that leverages both 
 ---
 
 ## Getting Started
-Follow these steps to get started with the Scraper tool:
 
-1. Clone the repository: `git clone https://github.com/your-username/scraper.git`
-2. Navigate to the project directory: `cd scraper`
-3. Activate the existing virtual environment (if not already activated):
-   - On Unix or MacOS: `source venv/bin/activate`
-   - On Windows: `venv\Scripts\activate`
-4. Locate your Chrome profile folder:
+### Prerequisites
+- [Git](https://git-scm.com/)
+- A Chrome browser installed on your system
+
+### Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/scraper.git
+   2. **Navigate to the project directory, create and activate a virtual environment, and install required libraries:**
+   ```bash
+   cd scraper
+   python3 -m venv venv      # On Unix or MacOS
+   source venv/bin/activate
+
+   # On Windows
+   python -m venv venv
+   venv\Scripts\activate
+
+   pip install -r requirements.txt
+2. **Navigate to the project directory, create and activate a virtual environment, and install required libraries:**
+   ```bash
+   cd scraper
+   python3 -m venv venv      # On Unix or MacOS
+   source venv/bin/activate
+
+   # On Windows
+   python -m venv venv
+   venv\Scripts\activate
+
+   pip install -r lib.txt
+3. **Locate your Chrome profile folder:**
    - **Windows:**
-     - Chrome profile folders are typically located at `C:\Users\<username>\AppData\Local\Google\Chrome\User Data\Profile <Profile Number>`. Replace `<username>` with your Windows username and `<Profile Number>` with the specific profile you are using.
+     - Chrome profile folders are typically located at `C:\Users\<username>\AppData\Local\Google\Chrome\User Data\Profile <Profile Number>`.
    - **Mac:**
-     - Chrome profile folders are typically located at `~/Library/Application Support/Google/Chrome/Profile <Profile Number>`. Replace `<Profile Number>` with the specific profile number you are using.
+     - Chrome profile folders are typically located at `~/Library/Application Support/Google/Chrome/Profile <Profile Number>`.
    - **Linux:**
-     - Chrome profile folders are typically located at `~/.config/google-chrome/Profile <Profile Number>`. Replace `<Profile Number>` with the specific profile number you are using.
-5. Go to `main.py` and change `--user-data-dir=C:/someFolderName`. Create a new Chrome profile and replace `C:/someFolderName` with the path to your Chrome profile.
-6. Run the tool: `python main.py`
+     - Chrome profile folders are typically located at `~/.config/google-chrome/Profile <Profile Number>`.
+
+4. **Configure Chrome profile path in `main.py`:**
+   Open `main.py` and locate the line containing `--user-data-dir=C:/someFolderName`. Replace `C:/someFolderName` with the path to your Chrome profile.
+
+5. **Run the tool:**
+   ```bash 
+   python main.py
+
+
+
+
