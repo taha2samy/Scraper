@@ -81,9 +81,20 @@ if (file) {
         global_editor.setValue(contents)
     };
     reader.readAsText(file);
-
 }
-    
 })
+document.getElementById("just_click").addEventListener("change",
+()=>{
+const file= document.getElementById("just_click").files[0];
+const reader = new FileReader();
+
+reader.onload = function (e) {
+    const contents = e.target.result;
+    global_editor.setValue(contents)
+};
+reader.readAsText(file);
+})
+
+
 
 
