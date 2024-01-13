@@ -22,17 +22,6 @@ The "Scraper" tool is a comprehensive web scraping solution that leverages both 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/your-username/scraper.git
-   2. **Navigate to the project directory, create and activate a virtual environment, and install required libraries:**
-   ```bash
-   cd scraper
-   python3 -m venv venv      # On Unix or MacOS
-   source venv/bin/activate
-
-   # On Windows
-   python -m venv venv
-   venv\Scripts\activate
-
-   pip install -r requirements.txt
 2. **Navigate to the project directory, create and activate a virtual environment, and install required libraries:**
    ```bash
    cd scraper
