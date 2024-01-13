@@ -1,28 +1,34 @@
 document.getElementById("go").addEventListener("click", () => {
-    document.getElementById("go").firstElementChild.firstElementChild.setAttribute("src", "loading.svg");
+    document.getElementById("go").firstElementChild.firstElementChild.setAttribute("src", `img/loading.svg`);
     var iframe = document.getElementsByTagName("iframe")[0];
     iframe.setAttribute("src", document.getElementById("urlInput").value);
     iframe.onload = () => {
-        document.getElementById("go").firstElementChild.firstElementChild.setAttribute("src", "search.svg");
+        document.getElementById("go").firstElementChild.firstElementChild.setAttribute("src", `img/search.svg`);
         showMessage("Page is loaded");
     };
 });
 
 
+// buttons_actions.js
+
 document.getElementById("execute").addEventListener("click", () => {
-   
-    const code = monaco.editor.getModels()[0].getValue();
-    document.getElementById("execute").firstElementChild.firstElementChild.setAttribute("src", "loading.svg");
+    const code = global_editor.getValue();
+    document.getElementById("execute").firstElementChild.firstElementChild.setAttribute("src", "img/loading.svg");
 
     try {
-        eval(code);
+        window.eval(code);
     } catch (error) {
-        console.error('Error during execution:', error);
+        console.log('Error during execution:' + error);
     } finally {
         showMessage("Code execution completed");
-        document.getElementById("execute").firstElementChild.firstElementChild.setAttribute("src", "run.svg");
+        document.getElementById("execute").firstElementChild.firstElementChild.setAttribute("src", "img/run.svg");
     }
 });
+
+
+
+// Add any other functions or logic related to button actions here
+
 
 
 toggleButton.addEventListener('click', function () {
@@ -32,12 +38,12 @@ toggleButton.addEventListener('click', function () {
         
         container.parentNode.insertBefore(editor, container.nextSibling);
         document.getElementById("toggleButton").firstChild.textContent="two sides";
-        document.getElementById("toggleButton").firstElementChild.firstElementChild.setAttribute("src","arrow_up.svg");
+        document.getElementById("toggleButton").firstElementChild.firstElementChild.setAttribute("src","img/arrow_up.svg");
         document.getElementById("editorContainer").style.setProperty("width","100%");
             }        else {
         document.getElementById("toggleButton").firstChild.textContent="one side";
         container.insertBefore(editor, container.firstChild);
-        document.getElementById("toggleButton").firstElementChild.firstElementChild.setAttribute("src","arrow_down.svg")
+        document.getElementById("toggleButton").firstElementChild.firstElementChild.setAttribute("src","img/arrow_down.svg")
         document.getElementById("editorContainer").style.setProperty("width","40%");
     }
 });

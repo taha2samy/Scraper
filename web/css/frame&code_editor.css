@@ -4,7 +4,8 @@
     justify-content: space-between;
     margin: 20px;
     height: 1000px;
-
+    resize: vertical;
+    overflow: scroll;
 }
 
 #editorContainer {
@@ -27,8 +28,7 @@
     width: 40%;
 
     margin:5px;
-    resize: vertical;
-    overflow: scroll;
+
     
 }
 

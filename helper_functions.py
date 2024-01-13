@@ -9,7 +9,7 @@ def save_text_to_file(text_to_save):
     root = tk.Tk()
     root.geometry("")
     print(os.getcwd())
-    path=os.getcwd()+r"\web\save.ico"
+    path=os.getcwd()+r"\web\img\save.ico"
     ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(path)
     a=False
     root.iconbitmap(False,default=path)

@@ -5,14 +5,20 @@ require.config({ paths: { 'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.31
         require(['vs/editor/editor.main'], function () {
             var editor = monaco.editor.create(document.getElementById('editor'), {
                 value: [
-                    `console.log("||||||| Welcome to Scraper |||||||||||");`,
-                    `let doc=document.getElementById("page");`,
+                    `let doc = document.getElementById("myIFrame").contentDocument;`,
+                    `console.log("let's start")`,
                     ''
                 ].join('\n'),
                 language: 'javascript',
                 fontSize: 22,
                 fontWeight: 'bold',
                 automaticLayout: true,
+                suggest: {
+                    // Enable basic suggestions
+                    basic: true,
+                    // Enable snippets suggestions
+                    snippets: true,
+                },
             });
 
 
