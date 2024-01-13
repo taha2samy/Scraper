@@ -8,3 +8,4 @@ specifically the "eel" library. The tool is structured around a web server that 
 2- JavaScript Editor: Empowers users to write and execute JavaScript code for efficient data scraping.<hr>
 3- Python Integration with "eel": Allows direct invocation of Python functions from the JavaScript code <hr>
  editor, ensuring a collaborative environment between Python and JavaScript.<hr>
+3- you can use any browser this,This gives me the ability to use any browser additions or extension
