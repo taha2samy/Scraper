@@ -43,7 +43,8 @@ The "Scraper" tool is a comprehensive web scraping solution that leverages both 
    python -m venv venv
    venv\Scripts\activate
 
-   pip install -r lib.txt
+   pip install -r requirements.txt
+
 3. **Locate your Chrome profile folder:**
    - **Windows:**
      - Chrome profile folders are typically located at `C:\Users\<username>\AppData\Local\Google\Chrome\User Data\Profile <Profile Number>`.
