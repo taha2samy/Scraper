@@ -50,7 +50,5 @@ The "Scraper" tool is a comprehensive web scraping solution that leverages both 
    python main.py
 
 ## Tutorial: How to Use a Scraper
-[![Watch the Video](https://img.youtube.com/vi/dQvQyIQCe2w/0.jpg)](https://www.youtube.com/watch?v=dQvQyIQCe2w)
 
-
-
+[![Watch the Video](https://img.youtube.com/vi/dQvQyIQCe2w/0.jpg)](https://youtu.be/dQvQyIQCe2w)
