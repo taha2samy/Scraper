@@ -4,3 +4,4 @@ Include/
 Lib/
 Scripts/
 pyvenv.cfg
+__pycache__/helper_functions.cpython-312.pyc
