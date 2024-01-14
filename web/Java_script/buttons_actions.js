@@ -6,7 +6,7 @@ const clearConsoleButton = document.getElementById("clear_console");
 const saveCommandButton = document.getElementById("save_Command");
 const uploadCommandButton = document.getElementById("upload_Command");
 const justClickInput = document.getElementById("just_click");
-
+const iframe = document.getElementsByTagName("iframe")[0];
 // Event listener for the "Go" button
 goButton.addEventListener("click", () => {
     const loadingIcon = goButton.firstElementChild.firstElementChild;
@@ -18,8 +18,21 @@ goButton.addEventListener("click", () => {
     iframe.onload = () => {
         loadingIcon.setAttribute("src", "img/search.svg");
         showMessage("Page is loaded");
+        
     };
-});
+});    // Access the contentDocument of the iframe
+            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+            // Attach click event to all anchor tags within the iframe
+            var links = iframeDocument.querySelectorAll('a');
+            links.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent default link behavior
+
+                    // Redirect only the iframe
+                    iframe.contentWindow.location.href = link.href;
+                });
+            });
 
 // Event listener for the "Execute" button
 executeButton.addEventListener("click", async () => {
@@ -152,6 +165,5 @@ function clear() {
 
 window.onload = function() {
     // Code here will run when the entire page is fully loaded
-    readCodetoedditor();
+    setTimeout(readCodetoedditor(),2000)
   };
-  
