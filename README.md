@@ -63,7 +63,6 @@ or any other operation you would perform on a regular web page.
 
 
 ## Tutorial: How to Use a Scraper
-This JavaScript code is designed to facilitate the retrieval of elements within an iframe on a web page. Follow the steps below to seamlessly integrate and utilize this functionality in your project:
 
 
 [![Watch the Video](https://img.youtube.com/vi/dQvQyIQCe2w/0.jpg)](https://youtu.be/dQvQyIQCe2w)
