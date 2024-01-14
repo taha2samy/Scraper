@@ -30,8 +30,11 @@ executeButton.addEventListener("click", async () => {
     try {
         disableExecuteButton(executeButton, executeButtonIcon);
 
+        // Save the code to a cookie
+        saveCodeToCookie({"code":code});
+
         const evalResult = await executeCode(code);
-        showMessage(`Code execution completed with result: ${evalResult}`);
+        showMessage(`Code execution completed `);
     } catch (error) {
         console.error(`Error during execution:\nType: ${error.name}\nMessage: ${error.message}\nPosition: ${error.stack}`);
         showMessage("Code execution has error");
@@ -120,8 +123,35 @@ function readFileContents(file) {
     reader.readAsText(file);
 }
 
+// Function to save code to a cookie
+function saveCodeToCookie(code) {
+    document.cookie =encodeURIComponent(JSON.stringify(code));
+}
+
+// Function to read code from a cookie
+function readCodeFromCookie() {
+    const decodedCookie = JSON.parse(decodeURIComponent(document.cookie));
+    
+
+    return (String(decodedCookie["code"]||""));
+}
+
+// Function to log the saved code to the console
+function readCodetoedditor() {
+    
+
+    global_editor.setValue(readCodeFromCookie())
+    
+}
+
 // Function to display a message (you might need to implement this)
 // Function to clear the console (you might need to implement this)
 function clear() {
-    console.clear()
+    console.clear();
 }
+
+window.onload = function() {
+    // Code here will run when the entire page is fully loaded
+    readCodetoedditor();
+  };
+  
