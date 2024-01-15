@@ -153,7 +153,7 @@ def call_from_webPage():
    print("Hi from java script--------------------")
 # now you can call this function from javascript console
 ```
-**Import code or put it in file  `helper_functions.py` **
+**Import code or put it in file**  `helper_functions.py` 
 
 ### You can do the opposite
 ```javascript
