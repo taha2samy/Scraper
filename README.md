@@ -78,10 +78,8 @@ or any other operation you would perform on a regular web page.
  **in JavaScript, the issue is that it's an asynchronous language.
  You need to perform certain synchronous operations,
  and one of the most common tasks is waiting for the page to load.**
-# Project [Project Name]
-
-## Asynchronous URL Loading Function
-
+ 
+### synchronous URL Loading Function
 Include this asynchronous function in your JavaScript code to load a specified URL in an iframe and pause execution until the page is fully loaded.
 
 ```javascript
@@ -110,7 +108,7 @@ await loadUrl(urlToLoad);
 }
 Main();
 ```
-### Remember you must use await
+#### Remember you must use await
 ### for wait some time
 ```javascript
 async function wait_time(seconds) {
@@ -142,4 +140,27 @@ function back() {
     });
 }
 
+```
+###
+### If you want to see message to check your progress (some time you can not check from console)
+```
+showMessage("type any message you want")
+```
+### Remember you can use any python function in javascript put decorator before function
+```python
+@eel.expose 
+def call_from_webPage():
+   print("Hi from java script--------------------")
+# now you can call this function from javascript console
+```
+**Import code or put it in file  `helper_functions.py` **
+
+### You can do the opposite
+```javascript
+eel.expose(call_func_from_python)
+function call_func_from_python()
+{
+console.log("Hi from python");
+
+}
 ```
