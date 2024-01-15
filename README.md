@@ -109,7 +109,7 @@ await loadUrl(urlToLoad);
 Main();
 ```
 #### Remember you must use await
-### for wait some time
+### for wait sometimes
 ```javascript
 async function wait_time(seconds) {
 
