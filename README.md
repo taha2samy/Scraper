@@ -160,7 +160,7 @@ def call_from_webPage():
 eel.expose(call_func_from_python)
 function call_func_from_python()
 {
-console.log("Hi from python");
+console.log("Hi from python--------------------");
 
 }
 ```
