@@ -143,7 +143,7 @@ function back() {
 ```
 ###
 ### If you want to see message to check your progress (some time you can not check from console)
-```
+```javascript
 showMessage("type any message you want")
 ```
 ### Remember you can use any python function in javascript put decorator before function
