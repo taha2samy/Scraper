@@ -66,4 +66,80 @@ or any other operation you would perform on a regular web page.
 
 
 [![Watch the Video](https://img.youtube.com/vi/dQvQyIQCe2w/0.jpg)](https://youtu.be/dQvQyIQCe2w)
+## Tutorial: How to Use a Scraper
+1. **Inspect the Web Page:**
+   - Navigate to the website you want to scrape.
+   - Right-click on the element you want to extract information from and select "Inspect" to identify its HTML structure.
+2. **Add Snippets:**
+   - In Developer Tools, go to the "Sources" tab.
+   - Look for the "Snippets" section in the left sidebar.
+   -  - Create new snippets or manage or run existing ones.
+## Some code you need If your toothbrush is not enough in JavaScript
+ **in JavaScript, the issue is that it's an asynchronous language.
+ You need to perform certain synchronous operations,
+ and one of the most common tasks is waiting for the page to load.**
+# Project [Project Name]
 
+## Asynchronous URL Loading Function
+
+Include this asynchronous function in your JavaScript code to load a specified URL in an iframe and pause execution until the page is fully loaded.
+
+```javascript
+/**
+ * Asynchronous function to load a URL in an iframe and wait for it to fully load.
+ * @param {string} url - The URL to be loaded in the iframe.
+ */
+async function loadUrl(url) {
+    // Load the specified URL in the iframe
+   const myIFrame = document.getElementById('myIFrame'); 
+    myIFrame.src = url;
+
+    // Wait for the iframe to fully load
+    await new Promise(resolve => {
+        myIFrame.addEventListener('load', resolve);
+    });
+}
+
+// Example Usage:
+// Replace 'myIFrame' with the actual ID of your iframe
+const urlToLoad = 'https://example.com'; // Replace 'https://example.com' with the desired URL
+
+// Call the function with the specified URL
+async function Main(){
+await loadUrl(urlToLoad);
+}
+Main();
+```
+### Remember you must use await
+### for wait some time
+```javascript
+async function wait_time(seconds) {
+
+    return new Promise(resolve => {
+
+        setTimeout(resolve, seconds * 1000);
+
+    });
+
+}
+
+```
+### If you want to go back
+```javascript
+function back() {
+    return new Promise((resolve, reject) => {
+            const myIFrame = document.getElementById('myIFrame'); 
+          if (myIFrame.contentWindow && myIFrame.contentWindow.history && myIFrame.contentWindow.history.length > 1) {
+            // Go back in the iframe's history
+            myIFrame.contentWindow.history.back();
+            // Resolve the promise once the history operation is complete
+            myIFrame.addEventListener('load', resolve);
+        } else {
+            // Reject the promise if iframe history is not available
+            console.warn('Iframe history not available or unable to go back.');
+            reject(new Error('Iframe history not available or unable to go back.'));
+        }
+    });
+}
+
+```
