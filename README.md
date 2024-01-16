@@ -25,11 +25,11 @@ The "Scraper" tool is a comprehensive web scraping solution that leverages both 
 2. **Navigate to the project directory, create and activate a virtual environment, and install required libraries:**
    ```bash
    cd scraper
-   python3 -m venv venv      # On Unix or MacOS
+   python3 -m venv .      # On Unix or MacOS
    source venv/bin/activate
 
    # On Windows
-   python -m venv venv
+   python -m venv .
    venv\Scripts\activate
 
    pip install -r lib.txt
